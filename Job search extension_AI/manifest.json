@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Job Search Extension",
+    "version": "1.0",
+    "description": "An AI-powered extension to parse resumes, match jobs, and apply automatically.",
+    "permissions": [
+        "storage",
+        "scripting",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "*://*.linkedin.com/*",
+        "*://*.glassdoor.com/*"
+    ],
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    }
+}
